@@ -1,0 +1,36 @@
+.content {
+  background-image: url("../../img/login-bg.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-control.password {
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-toggle-password {
+  align-self: flex-start;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  background-color: var(--alt-color);
+  border: 1px solid var(--alt-color);
+  color: var(--light) !important;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-toggle-password .icon {
+  color: inherit !important;
+}
+.btn-toggle-password.show .icon:last-of-type {
+  display: none !important;
+}
+.btn-toggle-password:not(.show) .icon:first-of-type {
+  display: none !important;
+}

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="ar-eg" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- Fontawesome font file css -->
+    <link rel="stylesheet" href="css/font-awesome/css/all.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.rtl.min.css" />
+    <!-- Template global css file. Requared all pages -->
+    <link rel="stylesheet" href="css/global.style.css" />
+    <link rel="stylesheet" href="css/pages/login.css" />
+  </head>
+  <body>
+    <main class="app">
+      <!-- Start of Navbar -->
+      <div class="navbar sticky-top w-100">
+        <div class="container">
+          <a class="navbar-brand" href="home.html">
+            <img
+              src="img/logo.webp"
+              data-src="img/logo.webp"
+              alt="logo"
+              width="113"
+              height="80"
+              class="lazy blur-up"
+            />
+          </a>
+        </div>
+      </div>
+      <!-- End of Navbar -->
+
+      <!-- Start of Content -->
+      <div class="content">
+        <div class="container py-5">
+          <h1 class="fw-bold h2 text-center mb-5 text-alt">تسجيل الدخول</h1>
+
+          <form
+            action=""
+            class="row flex-column needs-validation was-validated"
+            novalidate
+          >
+            <div class="col-12 mb-4">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userEmail"
+                  placeholder="اسم المستخدم او الايميل الالكتروني"
+                  value="test@test.com"
+                  required
+                />
+                <label for="userEmail"
+                  >اسم المستخدم او الايميل الالكتروني</label
+                >
+                <div class="valid-feedback">ادخال صحيح</div>
+              </div>
+            </div>
+
+            <div class="col-12 mb-4">
+              <div class="d-flex">
+                <div class="form-floating flex-grow-1">
+                  <input
+                    type="password"
+                    class="form-control password"
+                    id="userPassword"
+                    placeholder="كلمة المرور"
+                    required
+                  />
+                  <label for="userPassword">كلمة المرور</label>
+                  <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                </div>
+                <button type="button" class="btn btn-toggle-password">
+                  <i class="fas fa-eye-slash icon"></i>
+                  <i class="fas fa-eye icon"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <button
+                type="submit"
+                class="btn btn-main w-100 pulse-main fw-bold"
+              >
+                تسجيل الدخول
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- End of Content -->
+    </main>
+
+    <!--Page loader DOM Elements. Requared all pages-->
+    <div class="sweet-loader">
+      <div class="load">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- JQuery library file. requared all pages -->
+    <script src="plugins/jquery-3.2.1.min.js"></script>
+    <!-- lazyLoad Images -->
+    <script src="plugins/lazyload.min.js" defer></script>
+    <!-- Template global script file. requared all pages -->
+    <script src="js/global.script.js"></script>
+    <script src="js/login.js" defer></script>
+  </body>
+</html>
