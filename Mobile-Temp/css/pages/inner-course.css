@@ -1,92 +1,99 @@
-.content {
-  padding-bottom: 70px;
+.navbar .back-animation i {
+  animation: moveLeftRight 0.75s ease-in-out infinite alternate;
 }
-/* Start of Navbar */
-.navbar .nav-header {
-  max-width: 90%;
+.exams-wrapper .exam-item {
+  display: flex;
+  gap: 0.25rem;
 }
-.navbar .main-title {
-  color: var(--main-color);
+.exams-wrapper .exam-item:not(:last-of-type) {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #ddd;
 }
-/* End of Navbar */
-
-/* Start of Custom Video Wrapper */
-.custom-video-wrapper {
-  height: calc(100vh - 162px);
+.exams-wrapper .exam-item .exam-item-img {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  flex-shrink: 0;
+  position: relative;
 }
-.custom-video-wrapper.full-height {
-  height: 80vh;
+.exams-wrapper .exam-item .exam-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
-/* End of Custom Video Wrapper */
-
-/* Start of Video List */
-.videos-list-wrappers {
-  background-color: var(--light);
-  overflow-x: auto;
-  white-space: nowrap;
-  border-bottom: 1px solid var(--alt-color);
+.exams-wrapper
+  .exam-item:not(.passed):not(.failed)
+  .exam-item-img
+  .status-icon {
+  display: none !important;
 }
-.videos-list-wrappers::-webkit-scrollbar {
-  display: none;
+.exams-wrapper .exam-item.passed .exam-item-img .status-icon.failed {
+  display: none !important;
 }
-.videos-list-wrappers .video-list-item {
-  display: inline-block;
-  padding: 0.5rem 0.75rem;
-  font-weight: 700;
-  cursor: pointer;
-  font-size: 1.1rem;
-  background-color: var(--light);
-  -webkit-transition: background-color 0.2s ease-in-out;
-  -moz-transition: background-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out;
+.exams-wrapper .exam-item.failed .exam-item-img .status-icon.passed {
+  display: none !important;
 }
-.videos-list-wrappers .video-list-item.active {
-  background-color: var(--alt-color);
-  color: var(--main-color);
-}
-.videos-list-wrappers .video-list-item:not(:last-child) {
-  border-left: 1px solid var(--alt-color);
-  margin-right: -3px;
-}
-/* End of Video List */
-
-/* Start of Quiz Trigger Button */
-.btn-quiz-trigger {
-  margin-left: auto;
-  margin-right: auto;
+.exams-wrapper .exam-item.passed .exam-item-img .status-icon,
+.exams-wrapper .exam-item.failed .exam-item-img .status-icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 0.5rem;
-  border: none;
-  border-radius: var(--radius);
-  background-color: var(--dark);
-  color: var(--light);
-  min-height: 40px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  box-shadow: var(--shadow-sm);
-}
-.btn-quiz-trigger:hover {
   color: var(--light);
 }
-/* End of Quiz Trigger Button */
-
-/* Start of Offcanvas */
-.offcanvas.offcanvas-bottom {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+.exams-wrapper .exam-item.passed .exam-item-img .status-icon.passed {
+  background-color: rgba(25, 135, 84, 0.5);
+}
+.exams-wrapper .exam-item.failed .exam-item-img .status-icon.failed {
+  background-color: rgba(220, 53, 69, 0.5);
+}
+.exams-wrapper .exam-item .exam-item-info {
+  flex-grow: 1;
+  padding: 0.75rem;
+  background-color: var(--light);
+  border-radius: 10px;
+}
+.exams-wrapper .exam-item .exam-item-title {
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
-.offcanvas-bottom {
-  height: 50vh;
+.exams-wrapper .exam-item .exam-item-duration,
+.exams-wrapper .exam-item .exam-item-status {
+  font-size: 0.75rem;
+  font-weight: 500;
 }
-.offcanvas-title {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 1.1rem;
-  color: var(--main-color);
+.exams-wrapper .exam-item .exam-item-duration span,
+.exams-wrapper .exam-item .exam-item-status span {
+  font-weight: 600;
+  color: var(--alt-color);
 }
-/* End of Offcanvas */
+.exams-wrapper .exam-item .action {
+  min-height: auto !important;
+  padding: 0.25rem 1rem !important;
+  width: 100% !important;
+  box-shadow: none !important;
+}
+
+@keyframes moveLeftRight {
+  from {
+    transform: translateX(-5px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

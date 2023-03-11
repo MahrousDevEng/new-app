@@ -64,7 +64,6 @@
   --light-grey: #fafafa;
   --dark-grey: #ddd;
   --dark: #333;
-  --error: #ee1e0e;
   --font-family: "Source Serif Pro", serif;
   --font-size: 15px;
   --radius: 4px;
@@ -225,6 +224,10 @@ body {
 .btn-alt:hover {
   color: var(--light);
   background-color: var(--main-color);
+}
+.btn-mute {
+  color: var(--dark);
+  background-color: var(--dark-grey);
 }
 .pulse-main {
   -webkit-animation: pulse-main 2s infinite;
