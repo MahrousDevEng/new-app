@@ -139,7 +139,7 @@ $(function () {
       onInit: function (event, currentIndex) {
         stepsProgress.css(
           "width",
-          `${(1 / questionsStepper.steps("getTotalSteps")) * 100}`
+          `${(1 / questionsStepper.steps("getTotalSteps")) * 100}%`
         );
         stepsLabel.text(`1 / ${questionsStepper.steps("getTotalSteps")}`);
         prevBtn.hasClass("show") && prevBtn.removeClass("show");
